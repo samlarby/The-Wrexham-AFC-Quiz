@@ -1,0 +1,61 @@
+/*Font import*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/*Basic page styling */
+
+html,
+body {
+    background-image: url(/assets/images/pexels-pixabay-274506.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fafafa;
+    min-height: 100%;
+    margin: 0; 
+    font-family: "Roboto", sans-serif;
+}
+
+/* Home page game structure */
+
+#wrexham-badge {
+    height: 200px;
+    margin-left: -35px; 
+}
+
+#main-container {
+    background-color: #ef4136;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    box-shadow: 5px 5px 1px #d65151
+}
+
+#game-title {
+    padding: 5px 50px 15px 50px;
+    text-align: center;
+}
+
+#game-description {
+    text-align: center;
+    padding: 10px 30px 20px 30px;
+}
+
+#buttons-container {
+    text-align: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 20px;
+    width: 30%;
+    background-color: #3ca07e;
+    color: #fafafa;
+    text-decoration: none;
+    border: solid 2px #7dc0a9;
+    border-radius: 5px;
+}
+
