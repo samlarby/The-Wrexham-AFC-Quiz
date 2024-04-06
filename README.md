@@ -43,3 +43,4 @@ This mode is harder as it has 4 different answers to choose from, but also the q
 ## Credits
 ### Image Credits
 * The Wrexham Badge was taken from https://www.cleanpng.com/png-racecourse-ground-wrexham-a-f-c-national-league-ch-5009892/#google_vignette 
+* The background image was taken from https://www.pexels.com/photo/white-adidas-soccer-ball-on-grass-274506/

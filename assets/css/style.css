@@ -15,12 +15,34 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-/* Home page game structure */
+/* Header Structure */ 
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#game-title {
+    padding: 15px;
+    margin-right: 10px;
+    text-align: center;
+    font-weight: 400;
+    background-color: #226e57;
+    height: fit-content;
+    letter-spacing: 1px;
+    border-radius: 14px;
+}
 
 #wrexham-badge {
     height: 200px;
     margin-left: -35px; 
 }
+
+
+/* Home page game structure */
+
+
 
 #main-container {
     background-color: #ef4136;
@@ -29,17 +51,14 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     border-radius: 25px;
-    box-shadow: 5px 5px 1px #d65151
-}
-
-#game-title {
-    padding: 5px 50px 15px 50px;
-    text-align: center;
+    box-shadow: 5px 5px 1px #d65151;
+    padding: 20px; 
 }
 
 #game-description {
     text-align: center;
     padding: 10px 30px 20px 30px;
+    font-weight: 400; 
 }
 
 #buttons-container {
@@ -52,10 +71,35 @@ body {
 .button {
     margin: 20px;
     width: 30%;
-    background-color: #3ca07e;
+    background-color: #226e57;
     color: #fafafa;
     text-decoration: none;
-    border: solid 2px #7dc0a9;
     border-radius: 5px;
+    box-shadow: 1px 1px #226e57ab;
+    padding: 6px;
 }
 
+
+/* how to play styling */
+#htp {
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+#how-to-play {
+    text-align: center; 
+    margin: 10px 10px; 
+    font-weight: 300;
+}
+
+.step-by-step {
+    margin: 5px;
+}
+
+/* high score page styling */ 
+
+#high-score-title {
+    text-align: center;
+    font-weight: bolder;
+}
