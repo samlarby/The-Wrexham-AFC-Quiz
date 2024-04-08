@@ -103,3 +103,22 @@ body {
     text-align: center;
     font-weight: bolder;
 }
+
+/* difficulty level styling */
+
+#difficulty-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.difficulty-button {
+    background-color: #226e57;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px #226e57ab;
+    padding: 10px 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+}
