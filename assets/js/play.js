@@ -2,6 +2,9 @@
 
 //Game setup 
 
+const urlParams = new URLSearchParams(window.location.search);
+const selectedDifficulty = urlParams.get('difficulty');
+
 //Easy questions
 const easyQuestions = [
     {
@@ -121,57 +124,57 @@ function loadQuestion() {
     const questionElement = document.getElementById('quiz-question');
     const choicesElement = document.getElementById('choices');
 
-    const question = hardQuestions[currentQuestion];
+    const question = currentQuestions[currentQuestion];
     questionElement.textContent = question.question;
 
     choicesElement.innerHTML = '';
 
     question.choices.forEach(choice => {
-    const button = document.createElement('button');
-    button.textContent = choice;
-    button.onclick = () => checkAnswer(choice);
-    choicesElement.appendChild(button);
+      const button = document.createElement('button');
+      button.textContent = choice;
+      button.onclick = () => checkAnswer(choice);
+      choicesElement.appendChild(button);
     });
-}
+  }
 
-    function checkAnswer(answer) {
-      const question = hardQuestions[currentQuestion];
-      if (answer === question.correctAnswer) {
-        score++;
-      }
+  function checkAnswer(answer) {
+    const question = currentQuestions[currentQuestion];
+    if (answer === question.correctAnswer) {
+      score++; 
     }
+    markSelectedAnswer(answer)
+  }
 
-    function nextQuestion() {
-      currentQuestion++;
-      if (currentQuestion < hardQuestions.length) {
-        loadQuestion();
-      } else {
-        showScore();
-      }
-    }
-
-    function showScore() {
-      const scoreElement = document.getElementById('score');
-      scoreElement.textContent = `Your score: ${score} out of ${hardQuestions.length}`;
-    }
-
-    loadQuestion();
-
-    function changeDifficulty() {
-        const difficultySelect = document.getElementById('difficulty');
-        selectedDifficulty = difficultySelect.value;
-        currentQuestion = 0;
-        score = 0;
-        if (selectedDifficulty === "easy") {
-          currentQuestions = easyQuestions;
-        } else {
-          currentQuestions = hardQuestions;
+  function markSelectedAnswer(answer) {
+    const choiceButtons = document.querySelectorAll('#choices button');
+      choiceButtons.forEach(button => {
+        if (button.textContent === answer) {
+          button.style.backgroundColor = '#6da594';
         }
-        loadQuestion();
-      }
+      });
+  }
   
-      document.getElementById('difficulty').addEventListener('change', changeDifficulty);
-  
-      changeDifficulty();
+
+  function nextQuestion() {
+    currentQuestion++;
+    if (currentQuestion < currentQuestions.length) {
+      loadQuestion();
+    } else {
+      showScore();
+    }
+  }
+
+  function showScore() {
+    const scoreElement = document.getElementById('score');
+    scoreElement.textContent = `Score: ${score} out of ${currentQuestions.length}`;
+  }
+
+  if (selectedDifficulty === "easy") {
+    currentQuestions = easyQuestions;
+  } else {
+    currentQuestions = hardQuestions;
+  }
+  loadQuestion();
+    
 
 

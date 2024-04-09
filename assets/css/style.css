@@ -142,7 +142,9 @@ body {
 }
 
 #choices {
-    padding: 10px; 
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #choices button {
@@ -167,4 +169,12 @@ body {
     border-radius: 5px;
     border: 0;
     padding: 10px;
+}
+
+#selected {
+    background-color: #0e1c17;
+}
+
+#score {
+    text-align: center;
 }
