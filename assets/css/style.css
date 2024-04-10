@@ -79,6 +79,10 @@ body {
     padding: 6px;
 }
 
+.button:hover {
+    transform: scale(1.2);
+}
+
 
 /* how to play styling */
 #htp {
@@ -158,6 +162,12 @@ body {
     color: white;
 }
 
+
+/*Expanding buttons when hovered over*/ 
+button:hover {
+    transform: scale(1.2);
+}
+
 #button-container {
     text-align: center;
     margin: 20px; 
@@ -178,3 +188,15 @@ body {
 #score {
     text-align: center;
 }
+
+#timer {
+    text-align: center;
+    font-weight: 300;
+}
+
+#current-score {
+    text-align: center;
+    font-weight: 300;
+}
+
+

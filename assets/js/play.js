@@ -117,64 +117,114 @@ const hardQuestions = [
 ];
 
 
-let currentQuestion = 0;
-let score = 0;
+    let currentQuestion = 0;
+    let score = 0;
+    let currentQuestions;
+    let timer;
 
-function loadQuestion() {
-    const questionElement = document.getElementById('quiz-question');
-    const choicesElement = document.getElementById('choices');
+    function loadQuestion() {
+      clearInterval(timer); 
 
-    const question = currentQuestions[currentQuestion];
-    questionElement.textContent = question.question;
+      const questionElement = document.getElementById('quiz-question');
+      const choicesElement = document.getElementById('choices');
+      const timerElement = document.getElementById('timer');
+      const currentScoreElement = document.getElementById('current-score'); 
 
-    choicesElement.innerHTML = '';
+      const question = currentQuestions[currentQuestion];
+      questionElement.textContent = question.question;
 
-    question.choices.forEach(choice => {
-      const button = document.createElement('button');
-      button.textContent = choice;
-      button.onclick = () => checkAnswer(choice);
-      choicesElement.appendChild(button);
-    });
-  }
+      choicesElement.innerHTML = '';
 
-  function checkAnswer(answer) {
-    const question = currentQuestions[currentQuestion];
-    if (answer === question.correctAnswer) {
-      score++; 
+      question.choices.forEach(choice => {
+        const button = document.createElement('button');
+        button.textContent = choice;
+        button.onclick = () => checkAnswer(choice);
+        choicesElement.appendChild(button);
+      });
+
+      startTimer(timerElement, 60);
+
+      currentScoreElement.textContent = `Score: ${score}`; 
     }
-    markSelectedAnswer(answer)
-  }
 
-  function markSelectedAnswer(answer) {
-    const choiceButtons = document.querySelectorAll('#choices button');
+    function startTimer(timerElement, duration) {
+      let timeLeft = duration;
+      timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+
+      timer = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          timeUp();
+        }
+      }, 1000);
+    }
+
+    function checkAnswer(answer) {
+      const question = currentQuestions[currentQuestion];
+      if (answer === question.correctAnswer) {
+        score++;
+        markCorrectAnswer();
+      } else {
+        markSelectedAnswer(answer);
+      }
+      clearInterval(timer);
+      updateScoreDisplay();
+    }
+
+    function markCorrectAnswer() {
+      const choiceButtons = document.querySelectorAll('#choices button');
       choiceButtons.forEach(button => {
-        if (button.textContent === answer) {
-          button.style.backgroundColor = '#6da594';
+        if (button.textContent === currentQuestions[currentQuestion].correctAnswer) {
+          button.style.backgroundColor = 'rgb(63, 150, 63)';
         }
       });
-  }
-  
-
-  function nextQuestion() {
-    currentQuestion++;
-    if (currentQuestion < currentQuestions.length) {
-      loadQuestion();
-    } else {
-      showScore();
     }
-  }
 
-  function showScore() {
-    const scoreElement = document.getElementById('score');
-    scoreElement.textContent = `Score: ${score} out of ${currentQuestions.length}`;
-  }
+    function markSelectedAnswer(answer) {
+      const choiceButtons = document.querySelectorAll('#choices button');
+      choiceButtons.forEach(button => {
+        if (button.textContent === answer) {
+          button.style.backgroundColor = ("#cb1d1d");
+        } else {
+          button.style.backgroundColor = '';
+        }
+      });
+    }
 
-  if (selectedDifficulty === "easy") {
-    currentQuestions = easyQuestions;
-  } else {
-    currentQuestions = hardQuestions;
-  }
-  loadQuestion();
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < currentQuestions.length) {
+        loadQuestion();
+      } else {
+        showScore();
+      }
+    }
+
+    function timeUp() {
+      alert("Time's up!");
+      nextQuestion();
+    }
+
+    function showScore() {
+      const scoreElement = document.getElementById('score');
+      scoreElement.textContent = `Your score: ${score} out of ${currentQuestions.length}`;
+      scoreElement.style.display = 'block';
+    }
+
+    function updateScoreDisplay() {
+      const currentScoreElement = document.getElementById('current-score');
+      currentScoreElement.textContent = `Score: ${score}`;
+    }
+
+    if (selectedDifficulty === "easy") {
+      currentQuestions = easyQuestions;
+    } else {
+      currentQuestions = hardQuestions;
+    }
+    loadQuestion();
     
 
 
