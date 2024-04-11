@@ -39,6 +39,10 @@ body {
     margin-left: -35px; 
 }
 
+.fa-house {
+    color: white; 
+}
+
 
 /* Home page game structure */
 
@@ -106,6 +110,7 @@ body {
 #high-score-title {
     text-align: center;
     font-weight: bolder;
+    padding: 0px 50px 10px;
 }
 
 /* difficulty level styling */
@@ -113,6 +118,11 @@ body {
 #difficulty-container {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 30px; 
+}
+
+#difficulty-title {
+    padding: 0px 30px 20px;
 }
 
 .difficulty-button {
