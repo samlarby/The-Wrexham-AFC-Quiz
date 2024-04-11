@@ -113,6 +113,10 @@ body {
     padding: 0px 50px 10px;
 }
 
+#highscores p {
+    text-align: center; 
+}
+
 /* difficulty level styling */
 
 #difficulty-container {
@@ -172,6 +176,15 @@ body {
     color: white;
 }
 
+#submit-form {
+    text-align: center;
+}
+
+#submit-form input {
+    color: white;
+    background-color: #226e57;
+    border: solid 1px white;
+}
 
 /*Expanding buttons when hovered over*/ 
 button:hover {

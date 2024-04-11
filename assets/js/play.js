@@ -85,7 +85,7 @@ const hardQuestions = [
     },
     {
         question: "What year were Wrexham A.F.C relegated out of the football league?",
-        choices: ["2005", "2006", "20010", "2008"],
+        choices: ["2005", "2006", "2010", "2008"],
         correctAnswer: "2008", 
     },
     {
@@ -199,7 +199,7 @@ const hardQuestions = [
       if (currentQuestion < currentQuestions.length) {
         loadQuestion();
       } else {
-        showScore();
+        showScoreForm();
       }
     }
 
@@ -218,6 +218,21 @@ const hardQuestions = [
       const currentScoreElement = document.getElementById('current-score');
       currentScoreElement.textContent = `Score: ${score}`;
     }
+
+    function showScoreForm() {
+      const scoreForm = document.getElementById('submit-form');
+      scoreForm.style.display = 'block';
+    }
+
+    function submitScore(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const finalScore = score;
+      window.location.href = `high-score.html?name=${name}&score=${finalScore}`;
+    }
+
+    const scoreForm = document.getElementById('submit-form');
+    scoreForm.addEventListener('submit', submitScore);
 
     if (selectedDifficulty === "easy") {
       currentQuestions = easyQuestions;
