@@ -12,21 +12,25 @@
         <a href="index.html"><img id="wrexham-badge" src="assets/images/kisspng-racecourse-ground-wrexham-a-f-c-national-league-c-england-football-team-5b41f0542c8833.7906722015310480201824.png" alt="The Wrexham A.F.C badge"></a>
         <h1 id="game-title">The Wrexham A.F.C Quiz</h1>
     </div>
-    <div id="quiz-container">
-        <div><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
-        <div id="quiz-question"></div>
-        <div id="choices"></div>
-        <div id="timer"></div>
-        <div id="current-score"></div>
-        <div id="score"></div>
-        <div id="button-container">
-            <button onclick="nextQuestion()">Next Question</button>
+    <div id="container">
+        <div id="quiz-container">
+            <div id="home-container">
+                <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div id="quiz-question"></div>
+            <div id="choices"></div>
+            <div id="timer"></div>
+            <div id="current-score"></div>
+            <div id="score"></div>
+            <div id="button-container">
+                <button onclick="nextQuestion()">Next Question</button>
+            </div>
+            <form id="submit-form" style="display: none;">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <input type="submit" value="submit">
+            </form>
         </div>
-        <form id="submit-form" style="display: none;">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <input type="submit" value="submit">
-        </form>
     </div>
     <script src="assets/js/play.js"></script>
 </body>

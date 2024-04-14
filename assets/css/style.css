@@ -10,7 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: #fafafa;
-    min-height: 100%;
+    height: 100%;
     margin: 0; 
     font-family: "Roboto", sans-serif;
 }
@@ -46,17 +46,21 @@ body {
 
 /* Home page game structure */
 
-
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75%;
+}
 
 #main-container {
     background-color: #ef4136;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 25px;
     box-shadow: 5px 5px 1px #d65151;
     padding: 20px; 
+    margin: 10px;
+    width: 50%;
+    height: fit-content;
 }
 
 #game-description {
@@ -117,16 +121,30 @@ body {
     text-align: center; 
 }
 
+#clear-high-score-container {
+    text-align: center;
+}
+
+#clear-highscore {
+    background-color: #226e57;
+    color: white;
+    border: 0;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 2px 2px #226e57;
+}
+
 /* difficulty level styling */
 
 #difficulty-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     padding-bottom: 30px; 
 }
 
 #difficulty-title {
     padding: 0px 30px 20px;
+    text-align: center;
 }
 
 .difficulty-button {
@@ -144,19 +162,17 @@ body {
 /*Quiz styling */
 #quiz-container {
     background-color: #ef4136;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     border-radius: 25px;
     box-shadow: 5px 5px 1px #d65151;
     padding: 20px; 
+    width: 500px;
 }
 
 #quiz-question {
     text-align: center;
     font-size: larger;
     font-weight: 500;
+    margin-top: 20px; 
 }
 
 #choices {
@@ -223,3 +239,107 @@ button:hover {
 }
 
 
+@media screen and (max-width: 1200px) {
+
+}
+
+/* Media queries for screen sizes with the max width of 992px*/
+
+@media screen and (max-width: 992px) {
+    
+    #home-container {
+        text-align: center;
+    }
+
+    #game-title {
+        padding: 20px; 
+    }
+    
+    #main-container{
+        width: 60%;
+        box-shadow: 0 0;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px; 
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+   .difficulty-button {
+    font-size: large; 
+   }
+
+   #quiz-question {
+    margin-top: 10px;
+   }
+
+    #quiz-container {
+        font-size: x-large;
+        margin: 5px;
+        box-shadow: 0 0;
+        padding: 20px;
+    }  
+    
+    #choices {
+        flex-direction: column;
+    }
+
+    #choices button {
+        font-size: x-large;
+    }
+    
+    #button-container button {
+        font-size: large;
+    }
+}
+
+/* Media queries for screen sizes with the max width of 768px*/
+
+@media screen and (max-width: 768px) {
+   
+   
+   
+    #header-container {
+    align-items: center;
+    margin-bottom: 7%;
+   }
+   
+    #game-title {
+        padding: 0; 
+        margin: 5px;
+        font-size: x-large;
+    }
+
+    #wrexham-badge {
+        height: 100px;
+        margin-left: -15px;
+    }
+
+    #game-description {
+        padding: 0;
+    }
+
+    
+
+    #how-to-play {
+        margin: 0; 
+    }
+
+    #quiz-container {
+        font-size: medium;
+        padding: 5px;
+    }
+
+    #choices button {
+        font-size: medium;
+    }
+    
+    #button-container button {
+        font-size: medium;
+    }
+}
