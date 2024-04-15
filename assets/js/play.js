@@ -2,6 +2,7 @@
 
 //Game setup 
 
+//Getting chosen difficulty
 const urlParams = new URLSearchParams(window.location.search);
 const selectedDifficulty = urlParams.get('difficulty');
 
@@ -233,6 +234,8 @@ const hardQuestions = [
 
     const scoreForm = document.getElementById('submit-form');
     scoreForm.addEventListener('submit', submitScore);
+
+//displays correct answers depending on difficulty chosen
 
     if (selectedDifficulty === "easy") {
       currentQuestions = easyQuestions;

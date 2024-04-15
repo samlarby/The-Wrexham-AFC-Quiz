@@ -1,13 +1,14 @@
-// Getting names and scores from submit-form and displaying them in high-score.html
+// Getting names and scores from play.html and displaying them in high-score.html
 
+// retrieves highscore 
 function updateHighScoresList() {
   const highscoresElement = document.getElementById('highscores');
   highscoresElement.innerHTML = ''; // Clear existing list
 
-  // Retrieve high scores from localStorage
+  // Retrieves high scores from local storage
   const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
-  // Populate the high scores list
+  // Creates an element for the highscore to be displayed on the page 
   highScores.forEach(highScore => {
     const listItem = document.createElement('p');
     listItem.textContent = `${highScore.username}: ${highScore.score}`;
@@ -26,16 +27,18 @@ if (username && score) {
   const existingHighScores = JSON.parse(localStorage.getItem('highScores')) || [];
   const isNewHighScore = !existingHighScores.some(entry => entry.username === username && entry.score === score);
 
-  // If it's a new high score, add it to localStorage
+  // if the high score does not already exist then it is added
   if (isNewHighScore) {
     existingHighScores.push({ username, score });
     localStorage.setItem('highScores', JSON.stringify(existingHighScores));
   }
 }
 
-// Call the function to populate the high scores list initially
+// Call the function to get the high scores list initially
 updateHighScoresList();
 
+
+//function to clear the high scores when clear high scores button is clicked
 function clearHighScores() {
   localStorage.removeItem('highScores');
   updateHighScoresList();
