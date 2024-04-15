@@ -50,7 +50,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75%;
 }
 
 #main-container {
@@ -199,7 +198,12 @@ body {
 #submit-form input {
     color: white;
     background-color: #226e57;
-    border: solid 1px white;
+    border: 0;
+    padding: 8px;
+}
+
+#submit-form:focus {
+    background: transparent;
 }
 
 /*Expanding buttons when hovered over*/ 
@@ -240,12 +244,61 @@ button:hover {
 
 
 @media screen and (max-width: 1200px) {
+    #container {
+        height: 75%;
+    }
+    #home-container {
+        text-align: center;
+    }
+    
+    #main-container {
+        padding: 55px;
+        font-size: x-large;
+    }
 
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 18px;
+        height: 45px;
+        margin: 10px;
+    }
+
+    .difficulty-button {
+        font-size: x-large; 
+    }
+
+    #quiz-container {
+        font-size: x-large;
+        width: fit-content;
+    }
+
+    
+
+   #choices button {
+        font-size: x-large;
+   }
+
+   #button-container button {
+        font-size: large;
+   }
+
+    #choices button {
+    font-size: x-large;
+    }
+
+    #button-container button {
+    font-size: large;
+    }   
 }
 
 /* Media queries for screen sizes with the max width of 992px*/
 
 @media screen and (max-width: 992px) {
+    #container {
+        height: 75%;
+    }
     
     #home-container {
         text-align: center;
@@ -258,18 +311,17 @@ button:hover {
     #main-container{
         width: 60%;
         box-shadow: 0 0;
+        font-size: larger;
     }
 
     .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 8px; 
+        padding: 8px;
     }
 
     button:hover {
         transform: scale(1.1);
     }
+
    .difficulty-button {
     font-size: large; 
    }
@@ -278,31 +330,33 @@ button:hover {
     margin-top: 10px;
    }
 
-    #quiz-container {
+   #quiz-container {
         font-size: x-large;
         margin: 5px;
         box-shadow: 0 0;
         padding: 20px;
-    }  
-    
-    #choices {
-        flex-direction: column;
-    }
+   }  
 
-    #choices button {
+   #choices {
+        flex-direction: column;
+   }
+
+   #choices button {
         font-size: x-large;
-    }
-    
-    #button-container button {
+   }
+
+   #button-container button {
         font-size: large;
-    }
+   }
 }
 
 /* Media queries for screen sizes with the max width of 768px*/
 
 @media screen and (max-width: 768px) {
    
-   
+   #main-container {
+    font-size: medium;
+   }
    
     #header-container {
     align-items: center;
