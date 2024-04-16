@@ -118,131 +118,140 @@ const hardQuestions = [
 ];
 
 
-    let currentQuestion = 0;
-    let score = 0;
-    let currentQuestions;
-    let timer;
+let currentQuestion = 0;
+let score = 0;
+let currentQuestions;
+let timer;
 
-    function loadQuestion() {
-      clearInterval(timer); 
+function loadQuestion() {
+  clearInterval(timer); 
 
-      const questionElement = document.getElementById('quiz-question');
-      const choicesElement = document.getElementById('choices');
-      const timerElement = document.getElementById('timer');
-      const currentScoreElement = document.getElementById('current-score'); 
+  const questionElement = document.getElementById('quiz-question');
+  const choicesElement = document.getElementById('choices');
+  const timerElement = document.getElementById('timer');
+  const currentScoreElement = document.getElementById('current-score'); 
 
-      const question = currentQuestions[currentQuestion];
-      questionElement.textContent = question.question;
+  const question = currentQuestions[currentQuestion];
+  questionElement.textContent = question.question;
 
-      choicesElement.innerHTML = '';
+  choicesElement.innerHTML = '';
 
-      question.choices.forEach(choice => {
-        const button = document.createElement('button');
-        button.textContent = choice;
-        button.onclick = () => checkAnswer(choice);
-        choicesElement.appendChild(button);
-      });
+  question.choices.forEach(choice => {
+    const button = document.createElement('button');
+    button.textContent = choice;
+    button.onclick = () => checkAnswer(choice);
+    choicesElement.appendChild(button);
+  });
 
-      startTimer(timerElement, 60);
+  startTimer(timerElement, 60);
 
-      currentScoreElement.textContent = `Score: ${score}`; 
-    }
+  currentScoreElement.textContent = `Score: ${score}`; 
+}
 
-    function startTimer(timerElement, duration) {
-      let timeLeft = duration;
-      timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+function startTimer(timerElement, duration) {
+  let timeLeft = duration;
+  timerElement.textContent = `Time Left: ${timeLeft} seconds`;
 
-      timer = setInterval(() => {
-        timeLeft--;
-        timerElement.textContent = `Time Left: ${timeLeft} seconds`;
+  timer = setInterval(() => {
+    timeLeft--;
+    timerElement.textContent = `Time Left: ${timeLeft} seconds`;
 
-        if (timeLeft <= 0) {
-          clearInterval(timer);
-          timeUp();
-        }
-      }, 1000);
-    }
-
-    function checkAnswer(answer) {
-      const question = currentQuestions[currentQuestion];
-      if (answer === question.correctAnswer) {
-        score++;
-        markCorrectAnswer();
-      } else {
-        markSelectedAnswer(answer);
-      }
+    if (timeLeft <= 0) {
       clearInterval(timer);
-      updateScoreDisplay();
+      timeUp();
     }
+  }, 1000);
+}
 
-    function markCorrectAnswer() {
-      const choiceButtons = document.querySelectorAll('#choices button');
-      choiceButtons.forEach(button => {
-        if (button.textContent === currentQuestions[currentQuestion].correctAnswer) {
-          button.style.backgroundColor = 'rgb(63, 150, 63)';
-        }
-      });
+function checkAnswer(answer) {
+  const question = currentQuestions[currentQuestion];
+  const choiceButtons = document.querySelectorAll('#choices button');
+
+
+  choiceButtons.forEach(button => {
+    button.disabled = true;
+  });
+
+  if (answer === question.correctAnswer) {
+    score++;
+    markCorrectAnswer();
+  } else {
+    markSelectedAnswer(answer);
+  }
+  clearInterval(timer);
+  updateScoreDisplay();
+}
+
+function markCorrectAnswer() {
+const choiceButtons = document.querySelectorAll('#choices button');
+choiceButtons.forEach(button => {
+  if (button.textContent === currentQuestions[currentQuestion].correctAnswer) {
+    button.style.backgroundColor = 'rgb(63, 150, 63)';
+  }
+});
+}
+
+function markSelectedAnswer(answer) {
+  const choiceButtons = document.querySelectorAll('#choices button');
+  choiceButtons.forEach(button => {
+    if (button.textContent === answer) {
+      button.style.backgroundColor = ("#cb1d1d");
+    } else if (button.textContent === currentQuestions[currentQuestion].correctAnswer) {
+      button.style.backgroundColor = "rgb(63, 150, 63)";
+    } else {
+      button.style.backgroundColor = '';
     }
+  });
+}
 
-    function markSelectedAnswer(answer) {
-      const choiceButtons = document.querySelectorAll('#choices button');
-      choiceButtons.forEach(button => {
-        if (button.textContent === answer) {
-          button.style.backgroundColor = ("#cb1d1d");
-        } else {
-          button.style.backgroundColor = '';
-        }
-      });
-    }
+function nextQuestion() {
+  currentQuestion++;
+  if (currentQuestion < currentQuestions.length) {
+    loadQuestion();
+  } else {
+    showScoreForm();
+  }
+}
 
-    function nextQuestion() {
-      currentQuestion++;
-      if (currentQuestion < currentQuestions.length) {
-        loadQuestion();
-      } else {
-        showScoreForm();
-      }
-    }
+function timeUp() {
+  alert("Time's up!");
+  nextQuestion();
+}
 
-    function timeUp() {
-      alert("Time's up!");
-      nextQuestion();
-    }
+function showScore() {
+  const scoreElement = document.getElementById('score');
+  scoreElement.textContent = `Your score: ${score} out of ${currentQuestions.length}`;
+  scoreElement.style.display = 'block';
+}
 
-    function showScore() {
-      const scoreElement = document.getElementById('score');
-      scoreElement.textContent = `Your score: ${score} out of ${currentQuestions.length}`;
-      scoreElement.style.display = 'block';
-    }
+function updateScoreDisplay() {
+  const currentScoreElement = document.getElementById('current-score');
+  currentScoreElement.textContent = `Score: ${score}`;
+}
 
-    function updateScoreDisplay() {
-      const currentScoreElement = document.getElementById('current-score');
-      currentScoreElement.textContent = `Score: ${score}`;
-    }
+function showScoreForm() {
+  const scoreForm = document.getElementById('submit-form');
+  scoreForm.style.display = 'block';
+}
 
-    function showScoreForm() {
-      const scoreForm = document.getElementById('submit-form');
-      scoreForm.style.display = 'block';
-    }
+function submitScore(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const finalScore = score;
+  window.location.href = `high-score.html?name=${name}&score=${finalScore}`;
+}
 
-    function submitScore(event) {
-      event.preventDefault();
-      const name = document.getElementById('name').value;
-      const finalScore = score;
-      window.location.href = `high-score.html?name=${name}&score=${finalScore}`;
-    }
-
-    const scoreForm = document.getElementById('submit-form');
-    scoreForm.addEventListener('submit', submitScore);
+const scoreForm = document.getElementById('submit-form');
+scoreForm.addEventListener('submit', submitScore);
 
 //displays correct answers depending on difficulty chosen
 
-    if (selectedDifficulty === "easy") {
-      currentQuestions = easyQuestions;
-    } else {
-      currentQuestions = hardQuestions;
-    }
-    loadQuestion();
-    
+if (selectedDifficulty === "easy") {
+  currentQuestions = easyQuestions;
+} else {
+  currentQuestions = hardQuestions;
+}
+loadQuestion();
+
 
 
