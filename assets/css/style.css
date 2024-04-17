@@ -6,7 +6,7 @@
 
 html,
 body {
-    background-image: url(../images/wrexham-afc-quiz-background-image-big-screen.jpg);
+    background-image: url(../images/Photo-29-03-2024,-16-24-03.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: #fafafa;
@@ -36,7 +36,7 @@ body {
 
 #wrexham-badge {
     height: 200px;
-    margin-left: -35px; 
+    margin-left: -20px;
 }
 
 .fa-house {
@@ -50,6 +50,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 65vh;
 }
 
 #main-container {
@@ -97,6 +98,11 @@ body {
     font-weight: bolder;
 }
 
+#htp-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;   
+}
 
 #how-to-play {
     text-align: center; 
@@ -159,6 +165,12 @@ body {
 }
 
 /*Quiz styling */
+#quiz-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #quiz-container {
     background-color: #ef4136;
     border-radius: 25px;
@@ -257,7 +269,6 @@ button:hover {
         justify-content: center;
         align-items: center;
         padding: 18px;
-        height: 45px;
         margin: 10px;
     }
 
@@ -266,27 +277,9 @@ button:hover {
     }
 
     #quiz-container {
-        font-size: x-large;
         width: fit-content;
     }
 
-    
-
-   #choices button {
-        font-size: x-large;
-   }
-
-   #button-container button {
-        font-size: large;
-   }
-
-    #choices button {
-    font-size: x-large;
-    }
-
-    #button-container button {
-    font-size: large;
-    }   
 }
 
 /* Media queries for screen sizes with the max width of 992px*/
@@ -305,8 +298,15 @@ button:hover {
         box-shadow: 0 0;
     }
 
+    #buttons-container {
+        flex-direction: column;
+        margin-top: 0;
+        align-items: center;
+    }
+
     .button {
         padding: 14px;
+        width: 40%;
     }
 
     button:hover {
@@ -314,55 +314,48 @@ button:hover {
     }
 
    .difficulty-button {
-    font-size: large; 
+        font-size: large; 
    }
 
    #quiz-question {
-    margin-top: 10px;
+        margin-top: 10px;
    }
 
    #quiz-container {
-    font-size: x-large;
-    margin: 5px;
-    box-shadow: 0 0;
-    padding: 20px;
+        margin: 5px;
+        box-shadow: 0 0;
+        padding: 20px;
    }  
 
    #choices {
-    flex-direction: column;
+        flex-direction: column;
    }
 
-   #choices button {
-        font-size: x-large;
-   }
-
-   #button-container button {
-        font-size: large;
-   }
 }
 
 /* Media queries for screen sizes with the max width of 768px*/
 
 @media screen and (max-width: 768px) {
    #main-container {
-    padding: 10px;
+        padding: 10px;
+        width: 75%;
    }
    
     #header-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    padding-top: 5px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
    }
    
     #game-title {
-        padding: 0px; 
+        padding: 7px; 
         margin: 5px;
     }
 
     #wrexham-badge {
         height: 100px;
-        margin-left: -15px;
+        margin-left: 0;
     }
 
     #game-description {
@@ -382,7 +375,6 @@ button:hover {
 
     #quiz-container {
         font-size: medium;
-        padding: 5px;
     }
 
     #choices button {
