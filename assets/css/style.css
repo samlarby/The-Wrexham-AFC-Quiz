@@ -99,7 +99,6 @@ body {
 
 #htp-container {
     display: flex;
-    text-align: center;
     justify-content: center;   
 }
 
@@ -213,6 +212,7 @@ body {
     background-color: #226e57;
     border: 0;
     padding: 8px;
+    margin-bottom: 5px;
 }
 
 #submit-form:focus {
@@ -235,10 +235,6 @@ button:hover {
     border-radius: 5px;
     border: 0;
     padding: 10px;
-}
-
-#selected {
-    background-color: #0e1c17;
 }
 
 #score {
@@ -352,7 +348,7 @@ button:hover {
    
     #game-title {
         padding: 7px; 
-        margin: 5px;
+        margin: 15px;
     }
 
     #wrexham-badge {
