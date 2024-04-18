@@ -177,6 +177,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 #quiz-container {
@@ -233,8 +234,10 @@ button:hover {
 }
 
 #button-container {
-    text-align: center;
     margin: 20px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #button-container button {
@@ -277,6 +280,10 @@ button:hover {
         margin: 10px;
     }
 
+    button:hover {
+        transform: scale(1.1);
+    }
+
     .difficulty-button {
         font-size: larger; 
     }
@@ -290,10 +297,6 @@ button:hover {
 
 @media screen and (max-width: 992px) {
     
-    #home-container {
-        text-align: center;
-    }
-
     #game-title {
         padding: 20px; 
     }
@@ -313,16 +316,10 @@ button:hover {
         width: 40%;
     }
 
-    button:hover {
-        transform: scale(1.1);
-    }
+    
 
    .difficulty-button {
         font-size: large; 
-   }
-
-   #quiz-question {
-        margin-top: 10px;
    }
 
    #quiz-container {
@@ -368,6 +365,10 @@ button:hover {
 
     #game-description {
         padding: 0;
+    }
+
+    #choices {
+        align-items: center;
     }
 
     #buttons-container {
