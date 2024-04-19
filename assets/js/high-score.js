@@ -38,7 +38,7 @@ if (username && score) {
 updateHighScoresList();
 
 
-//function to clear the high scores when clear high scores button is clicked
+// Clear the high scores when clear high scores button is clicked
 function clearHighScores() {
   localStorage.removeItem('highScores');
   updateHighScoresList();

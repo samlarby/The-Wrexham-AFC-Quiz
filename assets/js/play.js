@@ -1,8 +1,5 @@
-//*javascript for the quiz questions*//
 
-//Game setup 
-
-//Getting chosen difficulty
+//Getting chosen difficulty to show correct quiz questions
 const urlParams = new URLSearchParams(window.location.search);
 const selectedDifficulty = urlParams.get('difficulty');
 
@@ -123,6 +120,8 @@ let score = 0;
 let currentQuestions;
 let timer;
 
+
+// Load questions function
 function loadQuestion() {
   clearInterval(timer); 
 
@@ -148,6 +147,7 @@ function loadQuestion() {
   currentScoreElement.textContent = `Score: ${score}`; 
 }
 
+//Start timer when question is shown
 function startTimer(timerElement, duration) {
   let timeLeft = duration;
   timerElement.textContent = `Time Left: ${timeLeft} seconds`;
@@ -163,6 +163,7 @@ function startTimer(timerElement, duration) {
   }, 1000);
 }
 
+// Check if answer is correct and increment score if so
 function checkAnswer(answer) {
   const question = currentQuestions[currentQuestion];
   const choiceButtons = document.querySelectorAll('#choices button');
@@ -182,6 +183,10 @@ function checkAnswer(answer) {
   updateScoreDisplay();
 }
 
+/**Show the player if thwy have clicked on the correct answer
+ * If they click on the correct answer show green
+ * If they click on the wrong answer show red
+ * But also show them which was the correct answer */ 
 function markCorrectAnswer() {
 const choiceButtons = document.querySelectorAll('#choices button');
 choiceButtons.forEach(button => {
@@ -204,6 +209,7 @@ function markSelectedAnswer(answer) {
   });
 }
 
+// Show next question or score form depending if they are at the end of the quiz
 function nextQuestion() {
   currentQuestion++;
   if (currentQuestion < currentQuestions.length) {
@@ -213,27 +219,26 @@ function nextQuestion() {
   }
 }
 
+
+// Show an alert for when they run out of time
 function timeUp() {
   alert("Time's up!");
   nextQuestion();
 }
 
-function showScore() {
-  const scoreElement = document.getElementById('score');
-  scoreElement.textContent = `Your score: ${score} out of ${currentQuestions.length}`;
-  scoreElement.style.display = 'block';
-}
-
+// Update the players score as they go through the quiz
 function updateScoreDisplay() {
   const currentScoreElement = document.getElementById('current-score');
   currentScoreElement.textContent = `Score: ${score}`;
 }
 
+// Show the submit form for users to submit their name and score
 function showScoreForm() {
   const scoreForm = document.getElementById('submit-form');
   scoreForm.style.display = 'block';
 }
 
+// Function to submit the scores
 function submitScore(event) {
   event.preventDefault();
   const name = document.getElementById('name').value;
@@ -241,11 +246,11 @@ function submitScore(event) {
   window.location.href = `high-score.html?name=${name}&score=${finalScore}`;
 }
 
+// Event listener for the submit button
 const scoreForm = document.getElementById('submit-form');
 scoreForm.addEventListener('submit', submitScore);
 
-//displays correct answers depending on difficulty chosen
-
+// Displays correct questions depending on difficulty chosen
 if (selectedDifficulty === "easy") {
   currentQuestions = easyQuestions;
 } else {
