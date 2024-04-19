@@ -117,6 +117,9 @@ body {
 
 #high-score-title {
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: bolder;
 }
 
@@ -316,8 +319,6 @@ button:hover {
         width: 40%;
     }
 
-    
-
    .difficulty-button {
         font-size: large; 
    }
@@ -377,7 +378,6 @@ button:hover {
         align-items: center;
     }
     
-
     #how-to-play {
         margin: 0; 
     }
@@ -388,6 +388,7 @@ button:hover {
 
     #choices button {
         font-size: medium;
+        width: -webkit-fill-available;
     }
     
     #button-container button {
