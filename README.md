@@ -68,19 +68,19 @@ This mode is harder as it has 4 different answers to choose from, but also the q
 ## User Experience
 
 ### First time visitors
-* On the first visit users can learn about how to play the game, they will do this by entering the how to play page.
-* They can then play the game on which ever difficulty they choose.
-* They will gain knowledge about the football team even if they get the answers wrong because the game will show them the correct answers. 
+* As a first time visitor I want to learn how to play the game, they will do this by entering the how to play page.
+* I should easily be able to begin the game and select a difficulty of choice. 
+* I will be able to gain knowledge and not just play the game so when I return I will improve if I try to play again. 
 
 ### Second time visitors
-* On the second visit to the website users will be able to go straight into the game without needing to look how to play.
-* They will most likely choose the harder level to play as they have gained knowledge of the club from their previous visit.
-* Users will be able to play with their friends on the same device and be able to compare each others scores, they can do this on the highscores page.  
+* On the second visit I will be able to go straight into the game without needing to look how to play.
+* I will feel more confident and will want to try the harder level as I found the easy level to easy.
+* I want to be able to compare my scores with my friends, so we can compete against eachother.  
 
 
 ### Design Choices
 * Colour Scheme
-    * The two main colours used were red and green. These colours were chosen as they are the main colours associated with Wrexham AFC. White was used for the text as it makes it more appealing. 
+    * The two main colours used were red (#ef4136) and green (#226e57). These colours were chosen as they are the main colours associated with Wrexham AFC. White was used for the text as it makes it more appealing. 
 * Typography
     * The font used was Roboto, with sans-serif set as a back up font. Roboto was used as it has an easy readibility and has a clean and modern design. 
 * Imagery
@@ -106,7 +106,29 @@ This mode is harder as it has 4 different answers to choose from, but also the q
         * [Difficulty page](documentation/difficulty.js-jshint-validation.jpg)
         * [High score page](documentation/highscore.js-jshint-validation.jpg)
 
+#### Testing User Stories
 
+* First time visitor goals
+    * As a first time visitor I want to learn how to play the game.
+        * The user can easily do this by clicking on the how to play button on the home screen, this then takes them to the how to play page where they are shown clearly a step by step guide on how to play the game.
+    * I should easily be able to play the game and choose a difficulty
+        * When the user is ready to play the game they click the play button this takes them to the page where they can choose between easy or hard difficulty, when they click on either one they then move onto the quiz with the corresponding difficulty level questions. 
+    * I want to be able to gain knowledge
+        * The user gains knowledge on each question as they will be told the correct answer even if they choose the wrong one. Allowing them to learn as they play. 
+
+* Second time visitor goals
+    * I will be able to go straight into the game
+        * As the player already knows how to play from their previous visit they can just go straight into the game. 
+    * I will feel more confident and choose a harder difficulty level
+        * As the user has gained knowledge from their previous visit as they foudn out the correct answers even if they answered them wrong. They will have more confidence to try the harder level.
+    * I want to be able to compare my scores with my friends
+        * Users can do this by either playing on the same device and going to the highscores page and looking at all of their scores. Or they can show eachother their scores on their own devices and compare, if they want to reset the scoreboard they can press the clear high score button. 
+
+* Future visitor goals
+    * The future plan is to add more than ten questions in each difficulty level and then pick ten different questions from random to add variety to the quiz. 
+
+### Further testing
+*   
 
 ## Credits
 ### Image Credits
