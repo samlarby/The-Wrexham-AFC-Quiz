@@ -106,7 +106,14 @@ This mode is harder as it has 4 different answers to choose from, but also the q
         * [Difficulty page](documentation/difficulty.js-jshint-validation.jpg)
         * [High score page](documentation/highscore.js-jshint-validation.jpg)
 
-#### Testing User Stories
+/* Add lighthouse scores*/ 
+
+### Manual and Automated testing
+    * I have decided to stick with manual testing on this project, instead I asked users to test the website for me. It was tested on different browser sizes. I asked users to inform me if they could easily understand the game and felt like they could move through it easily and gain confidence and learn along the way. Their feedback is in the user stories testing. 
+
+    * I personally felt the project was to small to require automated testing. How ever if the project grew in size I would definitely implement it. 
+
+### Testing User Stories
 
 * First time visitor goals
     * As a first time visitor I want to learn how to play the game.
@@ -125,10 +132,17 @@ This mode is harder as it has 4 different answers to choose from, but also the q
         * Users can do this by either playing on the same device and going to the highscores page and looking at all of their scores. Or they can show eachother their scores on their own devices and compare, if they want to reset the scoreboard they can press the clear high score button. 
 
 * Future visitor goals
-    * The future plan is to add more than ten questions in each difficulty level and then pick ten different questions from random to add variety to the quiz. 
+    * The future plan is to add more than ten questions in each difficulty level and then pick ten different questions from random to add variety to the quiz. Also have two different leaderboards for each difficulty level. 
 
 ### Further testing
-*   
+* A lot of testing was done to ensure all page content was clearly visible on different screen sizes. 
+* The website was viewed in multiple different screen sizes using google chromes developer tools. 
+* The website was viewed and tested in different web browsers (google chrome, safari, microsoft edge, firefox). 
+
+
+## Bugs Found
+* One bug found was when going down to small screens on the harder difficulty levels the buttons contents were not staying in the buttons and they were not staying central. To overcome this issue I changed the display to flex and added justify content to center and this worked. 
+
 
 ## Credits
 ### Image Credits
