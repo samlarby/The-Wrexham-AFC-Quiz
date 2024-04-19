@@ -57,27 +57,25 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
     * Takes the user to the highscores page to see their previous scores. 
 
 
-The game has two different difficulty levels one easy and one hard. 
-
 ### Easy Mode
 
-The easy mode only has a 50/50 choice so there is less chance of getting the answer wrong, also the questions are slightly easier.
+The easy mode only has a 50/50 choice so there is less chance of getting the answer wrong, also the questions are slightly easier. Difficulty is selected before entering the quiz page. 
 
 ### Hard Mode
 
-This mode is harder as it has 4 different answers to choose from, but also the questions will be slightly harder.
+This mode is harder as it has 4 different answers to choose from, but also the questions will be slightly harder. If the player selects the correct answer it will light up green, if they select the wrong answer it will light up red and the correct answer will light up green, the purpose of this is allow the user to learn whilst playing the game. 
 
 ## User Experience
 
 ### First time visitors
-* On the first visit users can learn about how to play the game.
+* On the first visit users can learn about how to play the game, they will do this by entering the how to play page.
 * They can then play the game on which ever difficulty they choose.
 * They will gain knowledge about the football team even if they get the answers wrong because the game will show them the correct answers. 
 
 ### Second time visitors
 * On the second visit to the website users will be able to go straight into the game without needing to look how to play.
 * They will most likely choose the harder level to play as they have gained knowledge of the club from their previous visit.
-* Users will be able to play with their friends on the same device and be able to compare each others scores. 
+* Users will be able to play with their friends on the same device and be able to compare each others scores, they can do this on the highscores page.  
 
 
 ### Design Choices
@@ -91,6 +89,22 @@ This mode is harder as it has 4 different answers to choose from, but also the q
 
 ### Wireframes
 * All wireframes were created using Balsamiq wireframes, all designs for desktop, tablet and mobile are linked [here] /*add balsamic link here */
+
+### Testing
+* The W3C CSS validator and the W3C Markup Validator were used to validate every page of the project to make sure there were no syntax errors.
+
+    * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) [Result](documentation/css-validation.jpg)
+    * [W3C Markup Validator](https://validator.w3.org/) - Results for each page are below
+        * [Home page](documentation/index.html-valdidation.jpg)
+        * [Difficulty page](documentation/difficulty-level.html-validation.jpg)
+        * [Easy questions](documentation/easy-level.html-validation.jpg)
+        * [Hard questions](documentation/hard-level.html-validation.jpg)
+        * [High score page](documentation/highscore.html-validation.jpg)
+        * [How to play page](documentation/how-to-play.html-validation.jpg)
+    * [JSHint](https://jshint.com) - Results for each JavaScript file are below
+        * [Quiz page](documentation/play.js-jshint-validation.jpg)
+        * [Difficulty page](documentation/difficulty.js-jshint-validation.jpg)
+        * [High score page](documentation/highscore.js-jshint-validation.jpg)
 
 
 
