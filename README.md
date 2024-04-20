@@ -48,13 +48,31 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 
 ![How to play](documentation/how-to-play.jpg)
 
-### Game Buttons on home page
+### Game Buttons 
+#### Home page
 * The play button
     * This is the button the user will press if they want to go straight into the game.
 * How to play
-    * This button is for users who would like to know how to play the game.
+    * This button is for users who would like to know how to play the game
 * Highscore button
-    * Takes the user to the highscores page to see their previous scores. 
+    * Takes the user to the highscores page to see their previous scores
+#### Difficulty page
+* Easy button
+    * Takes the user through to the easy questions
+* Hard button
+    * Takes the user through to the hard questions
+
+#### Quiz page
+* Answers 
+    * There will be two or four answers visible for users to click on depending on the difficulty
+* Next Question
+    * This button allows users to go to the next question
+* Submit
+    * This button appears at the end of the quiz when all ten questions are answered
+
+#### High score page
+* Clear high scores button
+    * Allows user to clear all previous high scores that have been submitted
 
 ## User Experience
 
@@ -174,3 +192,6 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 ### Acknowledgements
 * I would like to thanke my mentor for their support.
 * Also thank you to the slack community. 
+* Icons were taken from <https://fontawesome.com/>
+* Font was from <https://fonts.google.com/>
+* With help to create the quiz javascript I used, w3 schools, mdn web docs, previous content from code institute, sitepoint to help with basic structure. 
