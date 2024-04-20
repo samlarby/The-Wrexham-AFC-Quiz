@@ -1,8 +1,8 @@
-# The Wrexham F.C Quiz
+# The Wrexham A.F.C Quiz
 
-The purpose of this website is to test peoples knowledge of Wrexham Football Club in the 2023/2024 season. The site is aimed at people who are already familiar and fans of the club and want to test how much they know about it. The website allows the users to submit their scores to a high score page so they can play with they're friends. 
+The purpose of this website is to test peoples knowledge of Wrexham Football Club in the 2023/2024 season. The site is aimed at people who are already familiar and who are fans of the club and want to test how much they know about it. The website allows the users to submit their scores to a high score page so they can play with their friends. 
 
-/*insert images of mock up here*/
+![Mock up image](documentation/wrexham-afc-quiz-mockup.jpg)
 
 ## Features 
 * Home page
@@ -12,7 +12,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 ![Home page](documentation/home-page.jpg)
 
 * Header 
-    * The header is simple with the quiz title and the football clubs badge. 
+    * The header is simple with the quiz title and the football clubs badge, the badge is also a link to the home page. 
     
 ![Header](documentation/header.jpg)
 
@@ -34,7 +34,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 ![Hard quiz questions](documentation/hard-quiz.jpg)
 
 * Submit high scores form
-    * This form appear after the user has been through all the questions, the user can submit their name and submit their score to the highscore page. 
+    * This form appears after the user has been through all the questions, the user can submit their name and submit their score to the highscore page. 
     
 ![Submit high scores form](documentation/submit-form.jpg)
 
@@ -55,9 +55,6 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
     * This button is for users who would like to know how to play the game.
 * Highscore button
     * Takes the user to the highscores page to see their previous scores. 
-
-
-
 
 ## User Experience
 
@@ -89,7 +86,8 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 
 
 ### Wireframes
-* All wireframes were created using Balsamiq wireframes, all designs for desktop, tablet and mobile are linked [here] /*add balsamic link here */
+* All wireframes were created using Balsamiq wireframes, all designs for desktop, tablet and mobile are linked [here](documentation/wireframes/milestone-project-2.png)
+* Some changes were made, the quiz title was moved to the top of the screen and also a wrexham badge was added for a more stylish look. 
 
 ### Testing
 * The W3C CSS validator and the W3C Markup Validator were used to validate every page of the project to make sure there were no syntax errors.
@@ -114,7 +112,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 
 * I have decided to stick with manual testing on this project, instead I asked users to test the website for me. It was tested on different browser sizes. I asked users to inform me if they could easily understand the game and felt like they could move through it easily and gain confidence and learn along the way. Their feedback is in the user stories testing. 
 
-* I personally felt the project was to small to require automated testing. How ever if the project grew in size I would definitely implement it. 
+* I personally felt the project was to small to require automated testing. However if the project grew in size I would definitely implement it. 
 
 ### Testing User Stories
 
@@ -138,9 +136,19 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
     * The future plan is to add more than ten questions in each difficulty level and then pick ten different questions from random to add variety to the quiz. Also have two different leaderboards for each difficulty level. 
 
 ### Further testing
-* A lot of testing was done to ensure all page content was clearly visible on different screen sizes. 
+* A lot of testing was done to ensure all page content was clearly visible on different screen sizes, including phones tablets and desktop screen sizes. 
 * The website was viewed in multiple different screen sizes using google chromes developer tools. 
 * The website was viewed and tested in different web browsers (google chrome, safari, microsoft edge, firefox). 
+
+### Manual Javascript testing
+* The correct difficulty level is shown to the user depending on what button the user clicks (easy or hard).
+* Once the difficulty is chosen the corresponding questions are shown to the user and the timer begins.
+* If the user selects the correct answer the button turns green and the score is incremented by one. The buttons are also disabled when one answer is selected. This stops the user from being able to click on the correct answer after getting it wrong. 
+* If the user clicks the wrong answer it turns red then the correct one is shown to them.
+* The user can click on next question and it takes them to the next question. 
+* Once all questions have been answered the user can click next question and a submit form is shown. They can enter their name and submit their score to the highscore page. 
+* Scores show on the highscore page unless the user clears them using the clear high score button.
+    * Here is a flow chart of how I wanted the game to work. [Flowchart](documentation/javascript-flow-chart.jpg)
 
 
 ## Bugs Found
