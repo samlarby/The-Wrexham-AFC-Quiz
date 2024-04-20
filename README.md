@@ -29,7 +29,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 ![Easy quiz questions](documentation/easy-quiz.jpg)
 
 * Hard quiz question page
-    * Similar to the easy questiion page but the questions are harder and there is now a choice of four questions instead of two. 
+    * Similar to the easy question page but the questions are harder and there is now a choice of four questions instead of two. 
     
 ![Hard quiz questions](documentation/hard-quiz.jpg)
 
@@ -77,7 +77,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 ## User Experience
 
 ### First time visitors
-* As a first time visitor I want to learn how to play the game, they will do this by entering the how to play page.
+* As a first time visitor I want to learn how to play the game.
 * I should easily be able to begin the game and select a difficulty of choice. 
 * I will be able to gain knowledge and not just play the game so when I return I will improve if I try to play again. 
 
