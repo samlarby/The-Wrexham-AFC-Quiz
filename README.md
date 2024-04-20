@@ -57,13 +57,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
     * Takes the user to the highscores page to see their previous scores. 
 
 
-### Easy Mode
 
-The easy mode only has a 50/50 choice so there is less chance of getting the answer wrong, also the questions are slightly easier. Difficulty is selected before entering the quiz page. 
-
-### Hard Mode
-
-This mode is harder as it has 4 different answers to choose from, but also the questions will be slightly harder. If the player selects the correct answer it will light up green, if they select the wrong answer it will light up red and the correct answer will light up green, the purpose of this is allow the user to learn whilst playing the game. 
 
 ## User Experience
 
@@ -77,6 +71,13 @@ This mode is harder as it has 4 different answers to choose from, but also the q
 * I will feel more confident and will want to try the harder level as I found the easy level to easy.
 * I want to be able to compare my scores with my friends, so we can compete against eachother.  
 
+
+### Difficulty modes
+* Easy mode
+    * The easy mode only has a 50/50 choice so there is less chance of getting the answer wrong, also the questions are slightly easier. Difficulty is selected before entering the quiz page. 
+
+* Hard Mode
+    * This mode is harder as it has 4 different answers to choose from, but also the questions will be slightly harder. If the player selects the correct answer it will light up green, if they select the wrong answer it will light up red and the correct answer will light up green, the purpose of this is allow the user to learn whilst playing the game. 
 
 ### Design Choices
 * Colour Scheme
@@ -106,12 +107,14 @@ This mode is harder as it has 4 different answers to choose from, but also the q
         * [Difficulty page](documentation/difficulty.js-jshint-validation.jpg)
         * [High score page](documentation/highscore.js-jshint-validation.jpg)
 
-/* Add lighthouse scores*/ 
+    * All webpages were tested using lighthouse and all performed to a passable level for performance, accessability, best practises and SEO for both mobile and desktop screen sizes. 
+
 
 ### Manual and Automated testing
-    * I have decided to stick with manual testing on this project, instead I asked users to test the website for me. It was tested on different browser sizes. I asked users to inform me if they could easily understand the game and felt like they could move through it easily and gain confidence and learn along the way. Their feedback is in the user stories testing. 
 
-    * I personally felt the project was to small to require automated testing. How ever if the project grew in size I would definitely implement it. 
+* I have decided to stick with manual testing on this project, instead I asked users to test the website for me. It was tested on different browser sizes. I asked users to inform me if they could easily understand the game and felt like they could move through it easily and gain confidence and learn along the way. Their feedback is in the user stories testing. 
+
+* I personally felt the project was to small to require automated testing. How ever if the project grew in size I would definitely implement it. 
 
 ### Testing User Stories
 
@@ -143,8 +146,23 @@ This mode is harder as it has 4 different answers to choose from, but also the q
 ## Bugs Found
 * One bug found was when going down to small screens on the harder difficulty levels the buttons contents were not staying in the buttons and they were not staying central. To overcome this issue I changed the display to flex and added justify content to center and this worked. 
 
+## Deployment 
+* This site was deployed to github pages here are the steps:
+    * In Github find the repository.
+    * Then go to the repository settings tab.
+    * In the code and automation section on the sidebar scroll down to pages.
+    * in the pages section under the source select deploy from branch.
+    * Then use the branch dropdown menu to select main instead of none.
+    * Then select root in the dropdown tab next to main.
+    * Once completed press save. 
+  * The github pages link is here <https://samlarby.github.io/milestone-project-2/>
 
 ## Credits
 ### Image Credits
 * The Wrexham Badge was taken from https://www.cleanpng.com/png-racecourse-ground-wrexham-a-f-c-national-league-ch-5009892/#google_vignette 
 * The background image was taken by myself.
+### Quiz Questions
+* All quiz questions were written by myself but some question ideas were taken from https://letsquiz.com/quiz/wrexham-a-f-c-knowledge-showdown-show-us-what-you-ve-got
+### Acknowledgements
+* I would like to thanke my mentor for their support.
+* Also thank you to the slack community. 
