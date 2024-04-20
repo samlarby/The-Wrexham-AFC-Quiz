@@ -136,22 +136,23 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 
 * First time visitor goals
     * As a first time visitor I want to learn how to play the game.
-        * The user can easily do this by clicking on the how to play button on the home screen, this then takes them to the how to play page where they are shown clearly a step by step guide on how to play the game.
+        * Users easily did this by clicking on the how to play button on the home screen, this then took them to the how to play page where they are shown clearly a step by step guide on how to play the game.
     * I should easily be able to play the game and choose a difficulty
-        * When the user is ready to play the game they click the play button this takes them to the page where they can choose between easy or hard difficulty, when they click on either one they then move onto the quiz with the corresponding difficulty level questions. 
+        * When the users were ready to play the game they clicked the play button this took them to the page where they can choose between easy or hard difficulty, when they click on either one they then move onto the quiz with the corresponding difficulty level questions. 
     * I want to be able to gain knowledge
-        * The user gains knowledge on each question as they will be told the correct answer even if they choose the wrong one. Allowing them to learn as they play. 
+        * The user gained knowledge on each question as they were informed of the the correct answer even if they chose the wrong one. Allowing them to learn as they play. 
 
 * Second time visitor goals
     * I will be able to go straight into the game
-        * As the player already knows how to play from their previous visit they can just go straight into the game. 
+        * Players already know how to play from their previous visit they and they felt confident enoung to go straight into the game. 
     * I will feel more confident and choose a harder difficulty level
-        * As the user has gained knowledge from their previous visit as they foudn out the correct answers even if they answered them wrong. They will have more confidence to try the harder level.
+        * Users gained knowledge from their previous visit as they found out the correct answers even if they answered them wrong. They had more confidence to try the harder level.
     * I want to be able to compare my scores with my friends
-        * Users can do this by either playing on the same device and going to the highscores page and looking at all of their scores. Or they can show eachother their scores on their own devices and compare, if they want to reset the scoreboard they can press the clear high score button. 
+        * Users could do this by either playing on the same device and going to the highscores page and looking at all of their scores. Or they could show eachother their scores on their own devices and compare, if they wanted to reset the scoreboard they can press the clear high score button. 
 
 * Future visitor goals
     * The future plan is to add more than ten questions in each difficulty level and then pick ten different questions from random to add variety to the quiz. Also have two different leaderboards for each difficulty level. 
+    * Also a variety of type of questions could be added like picture rounds. 
 
 ### Further testing
 * A lot of testing was done to ensure all page content was clearly visible on different screen sizes, including phones tablets and desktop screen sizes. 
@@ -168,9 +169,9 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 * Scores show on the highscore page unless the user clears them using the clear high score button.
     * Here is a flow chart of how I wanted the game to work. [Flowchart](documentation/javascript-flow-chart.jpg)
 
-
 ## Bugs Found
 * One bug found was when going down to small screens on the harder difficulty levels the buttons contents were not staying in the buttons and they were not staying central. To overcome this issue I changed the display to flex and added justify content to center and this worked. 
+* A bug with in the quiz was the players could continuously press the correct answer and their score would keep going up, to overcome this I disabled the choices so that once the player had selected one answer the buttons could no longer be pressed. 
 
 ## Deployment 
 * This site was deployed to github pages here are the steps:
