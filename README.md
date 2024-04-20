@@ -191,7 +191,7 @@ The purpose of this website is to test peoples knowledge of Wrexham Football Clu
 ### Quiz Questions
 * All quiz questions were written by myself but some question ideas were taken from https://letsquiz.com/quiz/wrexham-a-f-c-knowledge-showdown-show-us-what-you-ve-got
 ### Acknowledgements
-* I would like to thanke my mentor for their support.
+* I would like to thanks my mentor Okwudiri Okoro for their support.
 * Also thank you to the slack community. 
 * Icons were taken from <https://fontawesome.com/>
 * Font was from <https://fonts.google.com/>
